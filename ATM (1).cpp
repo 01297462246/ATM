@@ -6,6 +6,7 @@
  3. Ngô Hữu Thế
  4. Nguyễn Viết Hiếu
 */
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -896,7 +897,7 @@ void vien_thong_bao(string sVien)
 string passwordInput(unsigned maxLength)
 {
 	string pw = "";
-	for (char c; (c = getch()); )
+	for (char c; (c = _getch()); )
 	{
 		if (c == '\n' || c == '\r') { // \n là phím phím enter + \r là Nhảy về đầu hàng, không xuống hàng
 			cout << "\n";
